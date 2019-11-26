@@ -1,4 +1,4 @@
-body {
+.product__body {
   position: relative;
   min-height: 100%;
   background: #f5f5f5;
@@ -17,26 +17,170 @@ body {
 .product__header {
   height: 128px;
   text-align: center;
-}
-
-h1 {
-  margin: 40px 0 0;
-  
-  display: inline-block;
-}
-
-.product__header__mark {
-  width: 185px;
-  height: 49px;
-  line-height: 49px;
-  text-align: center;
-}
-
-.product__main__title {
-  display: block;
+  &__text {
+    margin: 40px 0 0;
+    display: inline-block;
+  }
+  &__mark {
+    width: 185px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+  }
 }
 
 .main__title {
+  padding: 16px;
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+
+.product__main__title {
   width: 700px;
   margin: 0 auto;
+  background-color: #fff;
 }
+
+
+
+
+.product__main__content {
+  margin: 0;
+  padding: 24px 12.5% 0;
+  border-top: 1px solid #f5f5f5;
+}
+
+.product__content {
+  flex-wrap: wrap;
+  text-align: center;
+  max-width: 320px;
+  margin: 0 auto;
+  &__text {
+    font-size: 32px;
+    display: flex;
+  }
+  &__price {
+    font-size: 20px;
+  }
+  &__img {
+   width: 64px;
+  }
+  &__form {
+    margin: 0 auto;
+    
+  }
+  &__postage {
+    margin: 0 0 0 8px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &__point {
+    background: #ccc;
+    height: 50px;
+    margin: 16px 0 0;
+  }
+  &__pointmessage {
+    padding: 16px;
+    font-size: 14px;
+  }
+  &__ul_price {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    
+  }
+  &__li_price {
+    display: table-cell;
+    padding: 16px 0;
+    text-align: right;
+    display: flex;
+  }
+}
+
+
+
+.image__name {
+  font-size: 16px;
+  width: calc(100% - 80px);
+  margin: 0 0 0 16px;
+  text-align: left;
+}
+
+
+
+.totalfee {
+  text-align: left;
+  font-size: 18px;
+}
+
+.totalprice {
+  margin-left: 100px;
+  margin-top: -10px;
+  font-size: 18px;
+    
+  span {
+      font-size: 28px;
+    }
+}
+
+.purchasebutton {
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+  background-color: red;
+  color: #fff;
+  margin: 8px 0 0;
+}
+
+.product__content__shippingaddress {
+  margin: 40px 0 0;
+  padding: 24px 12.5% 0;
+  border-top: 1px solid #f5f5f5;
+  padding: 24px 12.5% 40px;
+  address {
+    margin-right: 0%;
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  h3 {
+    margin-left: 0px;
+    font-size: 14px;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+  p {
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  a {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #0099e8;
+  }
+  i {
+    margin: 0 0 0 8px;
+    font-size: 10px;
+  }
+}
+
+
+
+  
+  
+

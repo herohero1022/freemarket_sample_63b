@@ -1,6 +1,6 @@
-%body
+%body.product__body
   .product__header
-    %h1
+    %h1.product__header__text
       %svg.product__header__mark{:viewbox => "0 0 281.19 84.08", :xmlns => "http://www.w3.org/2000/svg"}
         %defs
           :css
@@ -16,5 +16,50 @@
             %text.cls-2{:transform => "translate(86.41 62.77)"}Fmarket
   .product__main
     %section.product__main__title
-      %h2
+      %h2.main__title
         購入内容の確認
+      %section.product__main__content
+        .product__content
+          %h3.product__content__text
+            = image_tag  "harisenbon.jpeg", class: "product__content__img"
+            %p.image__name 
+              ハリセンボン
+          %form.product__content__form
+            %P.product__content__price
+              ¥3,500
+              %span.product__content__postage
+                送料込み
+            %ul.product__content__point
+              %li.point__li
+                .product__content__pointmessage
+                  ポイントはありません
+            %ul.product__content__ul_price
+              %li.product__content__li_price
+                .totalfee 
+                  支払い金額  
+                .totalprice
+                  %span ¥3,500
+            %button.purchasebutton{disabled: "", type: "submit"} 購入する
+
+      %section.product__content__shippingaddress
+        .shippingaddress
+          %h3 配送先
+          %address 
+            〒106-6118
+            %br/
+            東京都港区六本木６丁目１０−１ 六本木ヒルズ森タワー
+            %br/
+            メルカリ様
+            %p
+          %a{:href => "#"}
+            変更する
+            %i.fa.fa-chevron-right
+      %section.product__content__shippingaddress
+        .shippingaddress
+          %h3 支払い方法
+          %p
+            %br
+              
+          %a{:href => "#"}
+            変更する
+            %i.fa.fa-chevron-right
