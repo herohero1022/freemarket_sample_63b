@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, :controllers => {
-    :registrations => 'users/registrations',
-    :sessions => 'users/sessions'   
-  } 
+  devise_for :users
+
   root 'signup#index'
   resources :product, only: [:index]
   resources :homelogin, only: [:index]

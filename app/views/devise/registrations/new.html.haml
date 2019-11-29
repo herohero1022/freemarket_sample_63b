@@ -35,18 +35,18 @@
     .registration-contents
       %h2.registration-contents__head
         会員情報入力
-      %form.registration-form{action: "/users", method: "POST", novalidate: "novalidate"}
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .registration-form__list
           .form__group
-            %label{for: "nickname"} ニックネーム
+            = f.label :nickname, "ニックネーム"
             %span.form__group-alert 必須
             %input.input-def{name: "nickname", placeholder: "例) メルカリ太郎", type: "text", value: ""}/
           .form__group
-            %label{for: "email"} メールアドレス
+            %label{for: "nickname"} メールアドレス
             %span.form__group-alert 必須
-            %input.input-def{name: "email", placeholder: "例) PC・携帯どちらでも可", type: "text", value: ""}/
+            %input.input-def{name: "mail", placeholder: "例) PC・携帯どちらでも可", type: "text", value: ""}/
           .form__group
-            %label{for: "password"} パスワード
+            %label{for: "nickname"} パスワード
             %span.form__group-alert 必須
             %input.input-def{name: "password", placeholder: "7文字以上", type: "password"}/
             .form__group-checbox
