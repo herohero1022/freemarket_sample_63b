@@ -30,13 +30,14 @@
           %i.fa.fa-google.login-icon
           Googleでログイン
       .login-contents__therd
-        .login-form--mail
-          %input.login-input-mail.input-def{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-        .login-form--password
-          %input.login-input-password.input-def{name: "password", placeholder: "パスワード", type: "password"}/
+        = form_for(resource, as: resource_name, url: session_path(resource_name), autocomplete: "off") do |f|
+          .login-form--mail
+            = f.email_field :email, placeholder: "例) PC・携帯どちらでも可",class:"login-input-mail input-def"
+          .login-form--password
+            = f.password_field :password, placeholder: "7文字以上", class: "login-form--password input-def"
+          = f.submit "ログイン", class: "login-btn-submit" 
         .g-recaptcha{"data-callback" => "clearcall", "data-sitekey" => "6LfTGMQUAAAAAGCeFt77wZAR0i6mb6ZIAznZjdq0\r\n"}
         .login-form--btn
-          %button.login-btn-submit{type: "submit"} ログイン
         %a.loguin-form--text{href: "http://localhost:3000/signup/index"}
           パスワードをお忘れの方
     .login-footer
@@ -64,3 +65,11 @@
         %p.login-copylight
           © 2019 Mercari 
 
+
+-# .login-form--mail
+-#           %input.login-input-mail.input-def{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+-#         .login-form--password
+-#           %input.login-input-password.input-def{name: "password", placeholder: "パスワード", type: "password"}/
+-#         .g-recaptcha{"data-callback" => "clearcall", "data-sitekey" => "6LfTGMQUAAAAAGCeFt77wZAR0i6mb6ZIAznZjdq0\r\n"}
+-#         .login-form--btn
+-#           %button.login-btn-submit{type: "submit"} ログイン

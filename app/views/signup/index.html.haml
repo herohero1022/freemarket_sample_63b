@@ -28,5 +28,9 @@
             Facebookで登録する
           .signup-contents__bottom__btn--Google.btn-def
             %i.fa.fa-google.signup-icon
-            Googleで登録する
+            Googleで登録する 
+          - if user_signed_in?
+            = link_to "ログアウト", destroy_user_session_path, method: :delete,  class: "header__right--btn"  
+
+          
     = render "shared/sabfooter"
