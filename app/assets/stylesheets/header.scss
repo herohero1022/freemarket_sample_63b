@@ -267,18 +267,3 @@ li{
   list-style:none;
 }
 
-.category_ul{
-  position: absolute;
-  left: 0;
-  z-index: 1;
-  display: none;
-  background-color: #fafafa;
-  width: 200px;
-  height: 100px;
-  li {
-    margin-left: 0;
-    &:hover {
-      background-color: red;
-    }
-  }
-}
